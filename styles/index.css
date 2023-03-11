@@ -1,0 +1,317 @@
+* html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  margin: 0;
+}
+
+.gradient-bg {
+  background-color: #dee2fd;
+  background-image: radial-gradient(circle 800px at 700px 200px,
+      rgb(219, 225, 250) 0,
+      transparent 59%),
+    radial-gradient(circle 600px at calc(100% - 300px) 300px,
+      rgb(222, 253, 242) 0,
+      transparent 55%),
+    radial-gradient(circle 800px at right center,
+      rgb(236, 234, 255) 0,
+      transparent 55%),
+    radial-gradient(circle 800px at right bottom,
+      rgb(220, 224, 255) 0,
+      transparent 55%),
+    radial-gradient(circle 800px at calc(50% - 600px) calc(100% - 100px),
+      rgba(221, 231, 255, 0.747) 0,
+      transparent 55%);
+}
+
+.dark .gradient-bg {
+  background-color: #0f1734;
+  background-image: radial-gradient(circle 800px at 700px 200px,
+      rgb(26, 25, 68) 0,
+      transparent 59%),
+    radial-gradient(circle 600px at calc(100% - 300px) 300px,
+      hsl(218, 39%, 11%) 0,
+      transparent 55%),
+    radial-gradient(circle 800px at right center,
+      rgb(42, 43, 44) 0,
+      transparent 55%),
+    radial-gradient(circle 800px at right bottom,
+      rgb(14, 58, 12) 0,
+      transparent 55%),
+    radial-gradient(circle 800px at calc(50% - 600px) calc(100% - 100px),
+      rgb(26, 33, 65) 0,
+      transparent 55%);
+}
+
+.ais-Pagination {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.ais-SearchBox-submit {
+  display: none;
+}
+
+.ais-SearchBox-input {
+  background-color: transparent;
+}
+
+.ais-SearchBox-input:focus-visible {
+  outline: transparent;
+}
+
+.ais-SearchBox-reset .ais-SearchBox-resetIcon {
+  display: none;
+}
+
+/* Button */
+.ais-Dropdown-button {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  appearance: none;
+  background-color: #fff;
+  background-image: linear-gradient(-180deg, #fff, #fcfcfd);
+  border: 1px solid #d6d6e7;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 rgb(35 38 59 / 5%);
+  color: #23263b;
+  user-select: none;
+}
+
+.ais-Dropdown-button:hover {
+  background-image: linear-gradient(-180deg, #fff, #f5f5fa);
+}
+
+.ais-Dropdown-button:disabled[disabled] {
+  background-image: linear-gradient(-180deg, #fff, #f5f5fa);
+  border-color: #efeff5;
+  box-shadow: none;
+  color: #b6b7d5;
+}
+
+.ais-Dropdown-button--refined {
+  font-weight: bold;
+}
+
+/* Panel */
+.ais-Dropdown.ais-Panel {
+  margin: 0;
+  z-index: 500;
+}
+
+.ais-Dropdown .ais-Panel-body {
+  position: absolute;
+  border: 1px solid #d6d6e7;
+  border-radius: 0.25rem;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  background-color: #fff;
+}
+
+.ais-Dropdown .ais-Panel-header {
+  margin-bottom: 0;
+}
+
+.ais-Dropdown .ais-Panel-body {
+  display: none;
+}
+
+.ais-Dropdown .ais-Panel-footer {
+  margin: 0;
+}
+
+.ais-Dropdown--opened .ais-Panel-body {
+  display: block;
+}
+
+/* Mobile */
+.ais-Dropdown-close {
+  display: none;
+  width: 100%;
+  margin: 0 1rem 1rem;
+}
+
+.ais-Dropdown-mobileTitle {
+  display: none;
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 375px) {
+  .ais-Dropdown.ais-Dropdown--opened .ais-Panel-body {
+    position: fixed;
+    inset: 0;
+    margin: 0;
+    background: #fff;
+    padding-bottom: 4rem;
+    overflow-y: auto;
+  }
+
+  .ais-Dropdown.ais-Dropdown--opened .ais-Panel-footer {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+  }
+
+  .ais-Dropdown--opened .ais-Dropdown-close {
+    display: inline;
+  }
+
+  .ais-Dropdown-mobileTitle {
+    display: block;
+  }
+}
+
+/* Search */
+.search-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  focus-visible: transparent;
+  focus: outline-none;
+}
+
+.search-panel:focus .search-panel:focus:focus-visible {
+  outline: none;
+}
+
+.search-panel__filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-panel__pagination {
+  margin: 0 auto 1rem;
+}
+
+/* Custom brand dropdown */
+.my-BrandDropdown .ais-RefinementList-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.my-BrandDropdown .ais-RefinementList-item {
+  margin: 0.2rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 2em;
+  background: #e2e8f0e6;
+  color: #475569;
+}
+
+.my-BrandDropdown .ais-RefinementList-item .ais-RefinementList-checkbox {
+  display: none;
+}
+
+.my-BrandDropdown .ais-RefinementList-item.ais-RefinementList-item--selected {
+  background: #333;
+  color: #fff;
+}
+
+.my-BrandDropdown .ais-RefinementList-label mark {
+  background: none;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
+.ais-RefinementList-checkbox {
+  display: none;
+}
+
+.aa-SubmitIcon {
+  margin-left: 10px;
+}
+
+.test {
+  backdrop-filter: blur(16px) saturate(180%);
+}
+
+/* Autocomplete */
+.aa-DetachedSearchButton {
+  border-radius: 9999px !important;
+  background-color: rgb(241 245 249 / 0.75) !important;
+  font-size: 0.875rem
+     !important;
+  line-height: 1.25rem
+     !important;
+  color: rgb(100 116 139) !important;
+  border: none !important;
+  font-weight: 300 !important;
+}
+
+.dark .aa-DetachedSearchButton {
+  background-color: rgb(30 41 59) !important;
+}
+
+.aa-DetachedCancelButton {
+  display: none;
+}
+
+.aa-DetachedFormContainer {
+  background-color: rgb(241 245 249 / 0.75) !important;
+}
+
+.dark .aa-DetachedFormContainer {
+  background-color: rgb(30 41 59) !important;
+  color: rgb(100 116 139) !important;
+}
+
+.aa-DetachedContainer .aa-Panel {
+  background-color: rgb(241 245 249 / 0.75) !important;
+}
+
+.dark .aa-DetachedContainer .aa-Panel {
+  background-color: rgb(30 41 59) !important;
+}
+
+.aa-Source {
+  background-color: rgb(241 245 249 / 0.75) !important;
+}
+
+.dark .aa-Source {
+  background-color: rgb(30 41 59) !important;
+  color: rgb(100 116 139) !important;
+}
+
+.aa-Form {
+  background-color: rgb(241 245 249) !important;
+  border-radius: 9999px !important;
+}
+
+.dark .aa-Form {
+  background-color: rgb(30 41 59) !important;
+  color: rgb(100 116 139) !important;
+}
+
+.dark .aa-Input {
+  color: rgb(100 116 139) !important;
+  border-color: rgb(100 116 139) !important;
+  font-size: 16px !important;
+}
+
+.dark .aa-ItemContent mark {
+  color:#fff !important;
+}
+
+.aa-GradientBottom {
+  display:none;
+}
+
+.dark .aa-DetachedContainer {
+  background-color: rgb(30 41 59) !important;
+}
+@media screen and (max-width: 600px) {
+  .aa-DetachedContainer {
+    height: 90% !important;
+    margin: 5% !important;
+  }
+}
