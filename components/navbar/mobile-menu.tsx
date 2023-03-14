@@ -17,8 +17,8 @@ import {
 } from "@heroicons/react/24/outline"
 
 const items = [
-  { label: "Red Wines", href: "/wines/red" },
-  { label: "White Wines", href: "/wines/white" },
+  { label: "Red Wines", href: "/explore?types=Red" },
+  { label: "White Wines", href: "/explore?types=White" },
   { label: "Regions", href: "/regions" },
   { label: "Grapes", href: "/grapes" },
   { label: "Compare", href: "/compare" },
@@ -51,7 +51,7 @@ export function MobileMenu() {
               <DropdownMenuItem key={itemaccount.href}>
                 <Link
                   href={itemaccount.href}
-                  className="flex items-center rounded-lg text-sm text-slate-600 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none dark:text-slate-400"
+                  className="flex items-center rounded-lg text-sm text-slate-600 transition duration-150 ease-in-out hover:bg-slate-50 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-700"
                 >
                   <itemaccount.icon aria-hidden="true" />
                   {itemaccount.label}
@@ -64,28 +64,32 @@ export function MobileMenu() {
                 <DropdownMenuItem key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center rounded-lg text-sm text-slate-600 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none dark:text-slate-400"
+                    className="flex items-center rounded-lg text-sm text-slate-600 transition duration-150 ease-in-out hover:bg-slate-50 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-700"
                   >
                     {item.label}
                   </Link>
                 </DropdownMenuItem>
-              ))}{" "}
+              ))}
             </>
           </DropdownMenuGroup>
         ) : (
           <>
             <DropdownMenuGroup>
               <DropdownMenuItem>
-                {" "}
-                <div className="w-full items-center justify-between rounded-md border border-slate-400 px-3 py-1 text-center text-sm font-semibold text-slate-600 focus:outline-none dark:text-slate-400">
+                <Link
+                  href=""
+                  className="w-full items-center justify-between rounded-md border border-slate-400 px-3 py-1 text-center text-sm font-semibold text-slate-600 focus:outline-none dark:text-slate-400"
+                >
                   Login
-                </div>
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                {" "}
-                <div className="my-1 w-full rounded-md bg-indigo-500 px-3 py-1 text-center text-sm font-semibold text-slate-100 hover:bg-indigo-600 focus:outline-none">
+                <Link
+                  href=""
+                  className="my-1 w-full rounded-md bg-indigo-500 px-3 py-1 text-center text-sm font-semibold text-slate-100 hover:bg-indigo-600 focus:outline-none"
+                >
                   Sign Up
-                </div>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
@@ -95,7 +99,7 @@ export function MobileMenu() {
                 <DropdownMenuItem key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center rounded-lg text-sm text-slate-600 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none dark:text-slate-400"
+                    className="flex items-center rounded-lg text-sm text-slate-600 transition duration-150 ease-in-out hover:bg-slate-50 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-700"
                   >
                     {item.label}
                   </Link>

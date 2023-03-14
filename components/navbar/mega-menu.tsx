@@ -21,7 +21,7 @@ export function MegaMenu() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="col-span-1 w-full rounded-md bg-slate-100 p-4 dark:bg-slate-900">
                   <div className="mb-1 font-medium">
-                    <Link href="/explore?types=White" prefetch={false}>
+                    <Link href="/explore?types=Red" prefetch={false}>
                       Red
                     </Link>
                   </div>

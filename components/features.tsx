@@ -5,12 +5,12 @@ import { StarIcon as StarIconSolid } from "@heroicons/react/24/solid"
 const Fact = ({ content, label }) => {
   return (
     <div className="my-4 flex flex-col">
-      <dt className="mx-auto mb-1 text-3xl font-extrabold text-slate-800 dark:text-slate-300 md:text-4xl">
+      <div className="mx-auto mb-1 text-3xl font-extrabold text-slate-800 dark:text-slate-300 md:text-4xl">
         {content}
-      </dt>
-      <dd className="mx-auto text-xl font-medium text-slate-600 dark:text-slate-400">
+      </div>
+      <div className="mx-auto text-xl font-medium text-slate-600 dark:text-slate-400">
         {label}
-      </dd>
+      </div>
     </div>
   )
 }
@@ -55,7 +55,7 @@ const Features = () => {
                 <div className="my-2 h-2 w-1/2 rounded-md bg-slate-300 dark:bg-slate-700"></div>
                 <div className="my-2 h-2 w-1/3 rounded-md bg-slate-300 dark:bg-slate-700"></div>
                 <div className="my-2 h-2 w-1/2 rounded-md bg-slate-300 dark:bg-slate-700"></div>
-                <button className="mt-6 flex items-center rounded-md bg-slate-300 py-1 px-2 hover:shadow-lg dark:bg-slate-700">
+                <button className="mt-6 flex items-center rounded-md bg-slate-200 py-1 px-2 hover:shadow-lg dark:bg-slate-700">
                   <StarIconSolid className="h-4 w-4 font-medium text-indigo-500" />
                   <span className="ml-1 text-xs font-semibold text-indigo-500">
                     Compare
@@ -75,7 +75,7 @@ const Features = () => {
                 <div className="my-2 h-2 w-1/2 rounded-md bg-slate-300 dark:bg-slate-700"></div>
                 <div className="my-2 h-2 w-1/3 rounded-md bg-slate-300 dark:bg-slate-700"></div>
                 <div className="my-2 h-2 w-1/2 rounded-md bg-slate-300 dark:bg-slate-700"></div>
-                <button className="mt-6 flex items-center rounded-md bg-slate-300 py-1 px-2 hover:shadow-lg dark:bg-slate-700">
+                <button className="mt-6 flex items-center rounded-md bg-slate-200 py-1 px-2 hover:shadow-lg dark:bg-slate-700">
                   <StarIconSolid className="h-4 w-4 font-medium text-indigo-500" />
                   <span className="ml-1 text-xs font-semibold text-indigo-500">
                     Compare

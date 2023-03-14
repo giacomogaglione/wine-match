@@ -42,3 +42,6 @@ package-lock.json
 
 # supabase
 /supabase
+.env.development
+.env
+.vscode/settings.json
