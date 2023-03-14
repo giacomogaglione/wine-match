@@ -1,0 +1,8 @@
+dist/*
+.cache
+public
+node_modules
+*.esm.js
+types_db.ts
+types.ts
+misc

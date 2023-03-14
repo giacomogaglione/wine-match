@@ -309,9 +309,13 @@ body {
 .dark .aa-DetachedContainer {
   background-color: rgb(30 41 59) !important;
 }
+
+.aa-DetachedSearchButton {width: 125% !important;}
+
 @media screen and (max-width: 600px) {
   .aa-DetachedContainer {
     height: 90% !important;
     margin: 5% !important;
   }
+  .aa-DetachedSearchButton {width: 100% !important;}
 }

@@ -38,7 +38,7 @@ export function ComparisonIcon() {
             <DropdownMenuGroup>
               {compareList.map((wine) => (
                 <DropdownMenuItem key={wine.id}>
-                  <div className="flex items-center rounded-lg p-1 text-xs text-slate-600 transition duration-150 ease-in-out hover:bg-slate-50 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-700">
+                  <div className="text-md flex items-center rounded-lg p-1 text-slate-600 transition duration-150 ease-in-out hover:bg-slate-50 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-700">
                     {wine?.name}
                     <div>
                       <TrashIcon
