@@ -38,7 +38,7 @@ export default function Comparison() {
               </button>
               <section className="relative mb-2.5 pt-16 bg-slate-100/60 dark:bg-slate-800/60 overflow-hidden scale-100 style={{ backdropFilter: 'blur(16px)' 'saturate(180%)',}}">
                 <BaseWineCard wine={wine} />
-              </section>{" "}
+              </section>
               <Sections wine={wine} />
             </ComparisonCard>
           ))}

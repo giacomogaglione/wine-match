@@ -15,7 +15,7 @@ export default function Awards({ wine }: IAwardsProps) {
         </span>
         <span className="font-light text-slate-600 dark:text-slate-400">
           {item.score(wine)}
-        </span>{" "}
+        </span>
       </div>
     )
   }

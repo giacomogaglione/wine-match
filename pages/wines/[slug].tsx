@@ -24,23 +24,21 @@ export default function Wine({ wine, relatedProducts }) {
           className="decoration-slate-400 hover:underline dark:decoration-slate-600"
         >
           {"Wines"}
-        </Link>{" "}
+        </Link>
         {" > "}
         <Link
-          href={`/wines/${wine.tipologia}`}
+          href={`/explore?types=${wine.type}`}
           className="decoration-slate-400 hover:underline dark:decoration-slate-600"
         >
-          {" "}
-          {wine.tipologia}{" "}
-        </Link>{" "}
+          {wine.type}
+        </Link>
         {" > "}
         <Link
           href={`/countries/${wine.country_slug}`}
           className="decoration-slate-400 hover:underline dark:decoration-slate-600"
         >
-          {" "}
           {wine.nazione}
-        </Link>{" "}
+        </Link>
         {" > "}
         <Link
           href={`/regions/${wine.region_slug}`}
@@ -159,7 +157,7 @@ export default function Wine({ wine, relatedProducts }) {
             <div className="my-2 h-20 w-20 rounded-full bg-slate-300"></div>
           </div>
           <div className="justify-center text-center text-sm font-medium text-slate-600 dark:text-slate-400">
-            {relatedProducts?.food_1}{" "}
+            {relatedProducts?.food_1}
           </div>
         </div>
         <div className="flex flex-col p-2 rounded-xl bg-slate-100/75 dark:bg-slate-800/75 overflow-hidden shadow-xl scale-100 style={{ backdropFilter: 'blur(10px)', }}">
@@ -167,7 +165,7 @@ export default function Wine({ wine, relatedProducts }) {
             <div className="my-2 h-20 w-20 rounded-full bg-slate-300"></div>
           </div>
           <div className="justify-center text-center text-sm font-medium text-slate-600 dark:text-slate-400">
-            {relatedProducts?.food_2}{" "}
+            {relatedProducts?.food_2}
           </div>
         </div>
         <div className="flex flex-col p-2 rounded-xl bg-slate-100/75 dark:bg-slate-800/75 overflow-hidden shadow-xl scale-100 style={{ backdropFilter: 'blur(10px)', }}">
@@ -175,7 +173,7 @@ export default function Wine({ wine, relatedProducts }) {
             <div className="my-2 h-20 w-20 rounded-full bg-slate-300"></div>
           </div>
           <div className="justify-center text-center text-sm font-medium text-slate-600 dark:text-slate-400">
-            {relatedProducts?.food_3}{" "}
+            {relatedProducts?.food_3}
           </div>
         </div>
         <div className="flex flex-col p-2 rounded-xl bg-slate-100/75 dark:bg-slate-800/75 overflow-hidden shadow-xl scale-100 style={{ backdropFilter: 'blur(10px)', }}">
@@ -183,7 +181,7 @@ export default function Wine({ wine, relatedProducts }) {
             <div className="my-2 h-20 w-20 rounded-full bg-slate-300"></div>
           </div>
           <div className="justify-center text-center text-sm font-medium text-slate-600 dark:text-slate-400">
-            {relatedProducts?.food_4}{" "}
+            {relatedProducts?.food_4}
           </div>
         </div>
       </div>

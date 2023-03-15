@@ -55,7 +55,7 @@ const Features = () => {
                 <div className="my-2 h-2 w-1/2 rounded-md bg-slate-300 dark:bg-slate-700"></div>
                 <div className="my-2 h-2 w-1/3 rounded-md bg-slate-300 dark:bg-slate-700"></div>
                 <div className="my-2 h-2 w-1/2 rounded-md bg-slate-300 dark:bg-slate-700"></div>
-                <button className="mt-6 flex items-center rounded-md bg-slate-200 py-1 px-2 hover:shadow-lg dark:bg-slate-700">
+                <button className="mt-6 flex items-center rounded-md border-2 border-indigo-500 py-1 px-2 hover:shadow-lg">
                   <StarIconSolid className="h-4 w-4 font-medium text-indigo-500" />
                   <span className="ml-1 text-xs font-semibold text-indigo-500">
                     Compare
@@ -75,7 +75,7 @@ const Features = () => {
                 <div className="my-2 h-2 w-1/2 rounded-md bg-slate-300 dark:bg-slate-700"></div>
                 <div className="my-2 h-2 w-1/3 rounded-md bg-slate-300 dark:bg-slate-700"></div>
                 <div className="my-2 h-2 w-1/2 rounded-md bg-slate-300 dark:bg-slate-700"></div>
-                <button className="mt-6 flex items-center rounded-md bg-slate-200 py-1 px-2 hover:shadow-lg dark:bg-slate-700">
+                <button className="mt-6 flex items-center rounded-md border-2 border-indigo-500 py-1 px-2 hover:shadow-lg">
                   <StarIconSolid className="h-4 w-4 font-medium text-indigo-500" />
                   <span className="ml-1 text-xs font-semibold text-indigo-500">
                     Compare
@@ -100,7 +100,6 @@ const Features = () => {
       </div>
       <div className="my-6 text-center">
         <span className="bg-gradient-to-r from-emerald-500 to-cyan-400 bg-clip-text text-4xl font-extrabold text-transparent ">
-          {" "}
           Compare
         </span>
         <div className="texl-lg mx-auto mt-6 max-w-2xl font-semibold text-slate-600 dark:text-slate-400">
@@ -125,8 +124,8 @@ const Features = () => {
                     alt="White wine placeholder"
                     fill
                     sizes="(max-width: 768px) 20vw,
-              (max-width: 1200px) 15vw,
-              15vw"
+                          (max-width: 1200px) 15vw,
+                          15vw"
                     className="object-contain"
                   />
                 </div>
@@ -148,11 +147,11 @@ const Features = () => {
                     alt="Red wine placeholder"
                     fill
                     sizes="(max-width: 768px) 20vw,
-              (max-width: 1200px) 15vw,
-              15vw"
+                          (max-width: 1200px) 15vw,
+                          15vw"
                     className="object-contain"
                   />
-                </div>{" "}
+                </div>
                 <Skeleton />
               </div>
               <div className="m-2 flex max-w-sm rounded-xl border border-slate-300 p-2 shadow dark:border-slate-700">

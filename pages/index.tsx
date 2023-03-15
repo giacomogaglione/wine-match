@@ -7,9 +7,10 @@ const SearchBar = dynamic(() =>
     (mod) => mod.Search
   )
 )
-const Features = dynamic(() => import("@/components/features"))
+const Features = dynamic(() => import("@/components/home-features"))
 
 const WineCard = dynamic(() => import("@/components/cards/wine-card"))
+
 export default function Page({ bestPicks, italyMostPopular }) {
   return (
     <>
@@ -21,7 +22,7 @@ export default function Page({ bestPicks, italyMostPopular }) {
           The most extensive source of wines, spumanti and champagnes.
         </div>
         <div className="mt-6 flex-row items-center justify-center text-center lg:flex lg:space-x-6">
-          <Link href="/wines">
+          <Link href="/explore">
             <div className="mb-6 rounded-full bg-indigo-600 px-6 py-2 text-lg font-bold text-white hover:bg-indigo-400 focus:outline-none dark:bg-indigo-600 dark:text-slate-300 dark:hover:bg-indigo-700 lg:mb-0">
               Explore All
             </div>
