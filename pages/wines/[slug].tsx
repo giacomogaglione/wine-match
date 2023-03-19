@@ -34,14 +34,14 @@ export default function Wine({ wine, relatedProducts }) {
         </Link>
         {" > "}
         <Link
-          href={`/countries/${wine.country_slug}`}
+          href={`/explore?countries=${wine.country}`}
           className="decoration-slate-400 hover:underline dark:decoration-slate-600"
         >
-          {wine.nazione}
+          {wine.country}
         </Link>
         {" > "}
         <Link
-          href={`/regions/${wine.region_slug}`}
+          href={`/explore?regions=${wine.region}`}
           className="decoration-slate-400 hover:underline dark:decoration-slate-600"
         >
           {wine.region}

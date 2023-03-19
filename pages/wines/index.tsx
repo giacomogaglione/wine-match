@@ -40,7 +40,7 @@ export default function Home() {
       >
         <SearchBar />
         <div className="mx-auto">
-          <div className="dark-text-slate-400 fixed inset-0 left-[max(0px,calc(50%-39rem))] right-auto top-[9rem] z-20 hidden w-[19rem] overflow-auto rounded-lg px-2 pb-10 text-slate-600 lg:block">
+          <div className="fixed inset-0 left-[max(0px,calc(50%-39rem))] right-auto top-[9rem] z-20 hidden w-[19rem] overflow-auto rounded-lg px-2 pb-10 text-slate-600 dark:text-slate-400 lg:block">
             <VirtualFilters />
             <Filters />
           </div>

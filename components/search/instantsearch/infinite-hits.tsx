@@ -25,16 +25,16 @@ export function InfiniteHits({ hitComponent: HitComponent, ...props }) {
 
   return (
     <div>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2">
         {hits.map((hit) => (
           <div
             key={hit.objectID}
-            className="test flex scale-100 overflow-hidden rounded-xl bg-slate-100/60 p-2 shadow-xl hover:shadow-2xl dark:bg-slate-800/60 "
+            className="test flex scale-100 overflow-hidden rounded-xl bg-slate-100/60 p-2 shadow-xl hover:shadow-2xl dark:bg-slate-800/60"
           >
             <HitComponent hit={hit} />
           </div>
         ))}
-        <li
+        <div
           className="ais-InfiniteHits-sentinel"
           ref={sentinelRef}
           aria-hidden="true"

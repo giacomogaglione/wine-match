@@ -42,10 +42,10 @@ const Features = () => {
           flavors, and characteristics, and find your perfect match.
         </div>
       </div>
-      <div className="mx-auto max-w-4xl flex-row lg:flex">
-        <div className="w-full lg:w-1/2">
+      <div className="mx-auto max-w-4xl flex-row md:flex">
+        <div className="w-full md:w-1/2">
           <div className="relative">
-            <div className="flex max-w-sm rounded-xl border border-slate-300 px-4 py-2 shadow dark:border-slate-700 md:p-6 ">
+            <div className="flex max-w-sm rounded-xl border border-slate-300 px-4 py-2 shadow dark:border-slate-700">
               <BlurImage
                 imgSrc="https://res.cloudinary.com/winecompare/image/upload/v1669683375/white_wine_placeholder.png"
                 imgAlt="White wine placeholder"
@@ -65,7 +65,7 @@ const Features = () => {
             </div>
           </div>
           <div className="z-1 relative mt-6 lg:top-[-20px] lg:left-28 lg:mt-0">
-            <div className="flex max-w-sm rounded-xl border border-slate-300 p-4 shadow dark:border-slate-700 md:p-6">
+            <div className="flex max-w-sm rounded-xl border border-slate-300 p-4 shadow dark:border-slate-700">
               <BlurImage
                 imgSrc="https://res.cloudinary.com/winecompare/image/upload/v1669683375/red_wine_placeholder.png"
                 imgAlt="Red wine placeholder"
@@ -85,7 +85,7 @@ const Features = () => {
             </div>
           </div>
         </div>
-        <div className="m-auto w-full lg:w-1/2">
+        <div className="m-auto w-full md:w-1/2">
           <Fact content="8K+" label="WINES" />
           <Fact content="2K+" label="PRODUCERS" />
           <Fact content="300+" label="REGIONS" />
@@ -108,13 +108,13 @@ const Features = () => {
           textures, and aromas with every sip.
         </div>
       </div>
-      <div className="mx-auto max-w-4xl flex-row lg:flex">
-        <div className="m-auto w-full lg:w-1/2">
+      <div className="mx-auto max-w-4xl flex-row md:flex">
+        <div className="m-auto w-full md:w-1/2">
           <Fact content="15+" label="ATTRIBUTES" />
           <Fact content="150+" label="PAIRINGS" />
           <Fact content="10+" label="AWARDS" />
         </div>
-        <div className="w-full lg:w-1/2">
+        <div className="w-full md:w-1/2">
           <div className="mx-auto my-6 flex max-w-sm rounded-xl border border-slate-300 p-2 shadow dark:border-slate-700">
             <div className="w-1/2">
               <div className="m-2 flex max-w-sm rounded-xl border border-slate-300 p-2 shadow dark:border-slate-700">

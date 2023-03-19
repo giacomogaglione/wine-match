@@ -49,7 +49,7 @@ export default function Comparison() {
               <Card>
                 <Link
                   href={`/wines/${wine.slug}`}
-                  className="-m-2 block rounded-md p-2 text-center decoration-slate-400 hover:bg-slate-50 hover:font-semibold focus:bg-slate-50 focus:font-semibold dark:hover:bg-slate-700 dark:focus:bg-slate-700"
+                  className="-m-2 block rounded-md p-2 text-center text-slate-800 decoration-slate-400 hover:bg-slate-50 hover:font-semibold focus:bg-slate-50 focus:font-semibold dark:text-slate-300 dark:hover:bg-slate-700 dark:focus:bg-slate-700"
                 >
                   Details →
                 </Link>

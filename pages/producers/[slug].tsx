@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import BlurImage from "@/components/blur-image"
 import WineCard from "@/components/cards/wine-card"
 import Seo from "@/components/seo"
 import { client } from "@/lib/supabase-client"
@@ -17,10 +18,10 @@ export default function Producers({ producer, relatedWines }) {
   return (
     <>
       <Seo title={`${producer.name} - Wine Match`} />
-      <div className="mt-3 flex items-center rounded-md py-2">
-        <div className="w-full text-2xl font-bold text-slate-800 dark:text-slate-300">
+      <div className="mt-3 flex w-full items-center py-2">
+        <div className="text-2xl font-bold text-slate-800 dark:text-slate-300">
           {producer.name}
-          <div className="mb-10 mt-1 flex items-center text-sm font-normal text-slate-600 dark:text-slate-400">
+          <div className="my-1 flex items-center text-sm font-normal text-slate-600 dark:text-slate-400">
             <div className="relative mr-2 h-4 w-4 rounded-full">
               <Image
                 src={producer.country_flag}
@@ -37,17 +38,22 @@ export default function Producers({ producer, relatedWines }) {
               href={`/regions/${producer.region}`}
               className="hover:underline hover:decoration-slate-400 dark:hover:decoration-slate-600"
             >
-              {producer.regione}
+              {producer.region}
             </Link>
             {",  "}
             <Link
               href={`/countries/${producer.country_slug}`}
               className="hover:underline hover:decoration-slate-400 dark:hover:decoration-slate-600"
             >
-              {producer.nazione}
+              {producer.country}
             </Link>
           </div>
-        </div>
+        </div>{" "}
+        <BlurImage
+          imgSrc={producer.image}
+          imgAlt={producer.name}
+          height="4rem"
+        />
       </div>
       <div className="flex flex-wrap overflow-hidden p-2">
         <div className="relative w-full overflow-hidden text-sm lg:w-2/3">
@@ -88,7 +94,7 @@ export default function Producers({ producer, relatedWines }) {
       <div className="mb-2 text-xl font-semibold text-slate-800 dark:text-slate-300">
         Others from {producer?.name}
       </div>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-3">
         {relatedWines.map((wine) => (
           <div
             className="flex p-2 rounded-xl bg-slate-100/60 dark:bg-slate-800/60 overflow-hidden shadow-xl scale-100 style={{ backdropFilter: 'blur(16px)' 'saturate(180%)',}}"
@@ -135,7 +141,7 @@ export async function getStaticProps({ params }) {
     .from("wines")
     .select("*")
     .filter("producer_slug", "eq", slug)
-    .limit(4)
+    .limit(3)
 
   return {
     props: {

@@ -8,7 +8,10 @@ import { Button } from "@/components/ui/button"
 import { DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import { searchClient } from "@/lib/search-client"
 import { FunnelIcon } from "@heroicons/react/24/outline"
-import { InstantSearch } from "react-instantsearch-hooks-web"
+import {
+  CurrentRefinements,
+  InstantSearch,
+} from "react-instantsearch-hooks-web"
 
 const ToastCompare = dynamic(
   () => import("@/components/comparison/toast-compare")
@@ -43,10 +46,18 @@ export default function Home() {
         <SearchBar />
         <div className="mx-auto">
           <div className="dark-text-slate-400 fixed inset-0 left-[max(0px,calc(50%-39rem))] right-auto top-[9rem] z-20 hidden w-[19rem] overflow-auto rounded-lg px-2 pb-10 text-slate-600 lg:block">
+            <CurrentRefinements
+              classNames={{
+                root: "ml-2 text-sm text-slate-600 dark:text-slate-400",
+                list: "flex flex-wrap",
+                item: "px-2 mr-1 my-1 py-[0.75] text-xs items-center justify-center rounded-full border border-slate-100 dark:border-slate-800 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:border-slate-500 dark:hover:border-slate-500",
+                label: "cursor-pointer text-xs",
+              }}
+            />
             <VirtualFilters />
             <Filters />
           </div>
-          <div className="md:hidden lg:hidden">
+          <div className="lg:hidden">
             <Dialog>
               <DialogTrigger asChild>
                 <Button

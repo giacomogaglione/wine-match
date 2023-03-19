@@ -10,30 +10,35 @@ const items = [
     label: "Wine Types",
     attribute: "type",
     searchable: false,
+    showMore: false,
   },
   {
     label: "Grapes",
     attribute: "_tags",
     searchable: true,
     searchablePlaceholder: "Search grapes",
+    showMore: true,
   },
   {
     label: "Regions",
     attribute: "region",
     searchable: true,
     searchablePlaceholder: "Search regions",
+    showMore: true,
   },
   {
     label: "Countries",
     attribute: "country",
     searchable: true,
     searchablePlaceholder: "Search countries",
+    showMore: true,
   },
   {
     label: "Wine styles",
     attribute: "classification",
     searchable: true,
     searchablePlaceholder: "Search wine styles",
+    showMore: true,
   },
 ]
 
@@ -62,7 +67,9 @@ export function Filters() {
           </div>
           <RefinementList
             attribute={item.attribute}
-            limit={5}
+            limit={4}
+            showMore={item.showMore}
+            showMoreLimit={10}
             sortBy={["count:desc"]}
             searchable={item.searchable}
             searchablePlaceholder={item?.searchablePlaceholder}
@@ -77,6 +84,7 @@ export function Filters() {
               label: "cursor-pointer text-xs",
               checkbox:
                 "mr-2 peer h-3 w-3 shrink-0 rounded-sm border border-indigo-300",
+              showMore:"font-extralight text-xs ml-1",
               count: "font-extralight text-xs ml-1",
             }}
           />

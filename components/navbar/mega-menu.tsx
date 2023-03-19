@@ -29,9 +29,9 @@ export function MegaMenu() {
                     href="/explore?types=Red&regions=Tuscany"
                     text="Tuscany"
                   />
-                  <MegaMenuItem href="/" text="Southern Italy Primitivo" />
-                  <MegaMenuItem href="/" text="Amarone" />
-                  <MegaMenuItem href="/" text="Bolgheri" />
+                  <MegaMenuItem href="/explore?grapes=Primitive" text="Southern Italy Primitivo" />
+                  <MegaMenuItem href="/explore?classifications=Amarone%2520della%2520Valpolicella%2520DOCG" text="Amarone" />
+                  <MegaMenuItem href="explore?classifications=Bolgheri%2520DOC" text="Bolgheri" />
                 </div>
 
                 <div className="col-span-1 w-full rounded-md bg-slate-100 p-4 dark:bg-slate-900">
@@ -46,8 +46,8 @@ export function MegaMenu() {
                     href="/explore?types=White&countries=France"
                     text="French White"
                   />
-                  <MegaMenuItem href="/" text="Nothern Italy Pinot Grigio" />
-                  <MegaMenuItem href="/" text="German Riesling" />
+                  <MegaMenuItem href="explore?classifications=Barolo%2520DOCG" text="Barolo" />
+                  <MegaMenuItem href="/explore?grapes=Riesling" text="German Riesling" />
                 </div>
 
                 <div className="col-span-2 flex w-full flex-col text-sm text-slate-600 dark:text-slate-400">
@@ -68,24 +68,32 @@ export function MegaMenu() {
             <div className="w-[21rem] p-3 lg:w-[30rem]">
               <div className="grid grid-cols-3 gap-4">
                 <div className="col-span-1 w-full rounded-md bg-slate-100 p-4 dark:bg-slate-900">
-                  <MegaMenuItem href="/" text="Cabernet Sauvignon" />
-                  <MegaMenuItem href="/" text="Merlot" />
-                  <MegaMenuItem href="/" text="Chardonnay" />
-                  <MegaMenuItem href="/" text="Pinot Noir" />
+                  <MegaMenuItem href="/explore?grapes=Sauvignon" text="Cabernet Sauvignon" />
+                  <MegaMenuItem href="/explore?grapes=Merlot" text="Merlot" />
+                  <MegaMenuItem href="/explore?grapes=Chardonnay" text="Chardonnay" />
+                  <MegaMenuItem href="/explore?grapes=Pinot Nero" text="Pinot Noir" />
                 </div>
 
                 <div className="col-span-1 w-full rounded-md bg-slate-100 p-4 dark:bg-slate-900">
-                  <MegaMenuItem href="/" text="Zinfandel" />
-                  <MegaMenuItem href="/" text="Aglianico" />
-                  <MegaMenuItem href="/" text="Sangiovese" />
-                  <MegaMenuItem href="/" text="Pinot Grigio" />
+                  <MegaMenuItem href="/explore?grapes=Nebbiolo" text="Nebbiolo" />
+                  <MegaMenuItem href="/explore?grapes=Aglianico" text="Aglianico" />
+                  <MegaMenuItem href="/explore?grapes=Sangiovese" text="Sangiovese" />
+                  <MegaMenuItem href="/explore?grapes=Barbera" text="Barbera" />
                 </div>
 
                 <div className="col-span-1 w-full rounded-md bg-slate-100 p-4 dark:bg-slate-900">
-                  <MegaMenuItem href="/" text="Riesling" />
-                  <MegaMenuItem href="/" text="Vermentino" />
-                  <MegaMenuItem href="/" text="Trebbiano" />
-                  <MegaMenuItem href="/" text="Shiraz/Syrah" />
+                  <MegaMenuItem href="/explore?grapes=Riesling" text="Riesling" />
+                  <MegaMenuItem href="/explore?grapes=Vermentino" text="Vermentino" />
+                  <MegaMenuItem href="/explore?grapes=Trebbiano" text="Trebbiano" />
+                  <MegaMenuItem href="/explore?grapes=Syrah" text="Syrah" />
+                </div>
+                <div className="col-span-3 flex w-full flex-col text-sm text-slate-600 dark:text-slate-400">
+                  <Link href="/explore" prefetch={false}>
+                    <span className="flex items-center decoration-slate-400 hover:underline dark:decoration-slate-600">
+                      Browse all grapes
+                      <ArrowSmallRightIcon className=" h-4 w-4" />
+                    </span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -99,18 +107,18 @@ export function MegaMenu() {
                 <div className="col-span-2">
                   <div className="grid w-full grid-cols-5 rounded-md bg-slate-100 px-4 py-2 dark:bg-slate-900">
                     <div className="col-span-5 font-medium">
-                      <Link href="/countries/italy" prefetch={false}>
+                      <Link href="/explore?countries=Italy" prefetch={false}>
                         Italy
                       </Link>
                     </div>
                     <div className="col-span-3 mr-4">
-                      <MegaMenuItem href="/regions/abruzzo" text="Abruzzo" />
+                      <MegaMenuItem href="/explore?regions=Abruzzo" text="Abruzzo" />
                       <MegaMenuItem
                         href="/regions/alto-adige"
                         text="Alto Adige"
                       />
-                      <MegaMenuItem href="/regions/calabria" text="Calabria" />
-                      <MegaMenuItem href="/regions/campania" text="Campania" />
+                      <MegaMenuItem href="/explore?regions=Calabria" text="Calabria" />
+                      <MegaMenuItem href="/explore?regions=Campania" text="Campania" />
                       <MegaMenuItem
                         href="/regions/emilia-romagna"
                         text="Emilia Romagna"
@@ -119,51 +127,51 @@ export function MegaMenu() {
                         href="/regions/friuli-venezia-giulia"
                         text="Friuli Venezia Giulia"
                       />
-                      <MegaMenuItem href="/regions/lazio" text="Lazio" />
-                      <MegaMenuItem href="/regions/lombardy" text="Lombardy" />
-                      <MegaMenuItem href="/regions/marche" text="Marche" />
-                      <MegaMenuItem href="/regions/molise" text="Molise" />
+                      <MegaMenuItem href="/explore?regions=Lazio" text="Lazio" />
+                      <MegaMenuItem href="/explore?regions=Lombardy" text="Lombardy" />
+                      <MegaMenuItem href="/explore?regions=Marche" text="Marche" />
+                      <MegaMenuItem href="/explore?regions=Molise" text="Molise" />
                     </div>
 
                     <div className="col-span-2">
-                      <MegaMenuItem href="/regions/piedmont" text="Piedmont" />
-                      <MegaMenuItem href="/regions/puglia" text="Puglia" />
-                      <MegaMenuItem href="/regions/sardegna" text="Sardinia" />
-                      <MegaMenuItem href="/regions/sicily" text="Sicily" />
-                      <MegaMenuItem href="/regions/campania" text="Campania" />
-                      <MegaMenuItem href="/regions/tuscany " text="Tuscany" />
-                      <MegaMenuItem href="/regions/trentino" text="Trentino" />
-                      <MegaMenuItem href="/regions/umbria" text="Umbria" />
+                      <MegaMenuItem href="/explore?regions=Piedmont" text="Piedmont" />
+                      <MegaMenuItem href="/explore?regions=Puglia" text="Puglia" />
+                      <MegaMenuItem href="/explore?regions=Sardinia" text="Sardinia" />
+                      <MegaMenuItem href="/explore?regions=Sicily" text="Sicily" />
+                      <MegaMenuItem href="/explore?regions=Campania" text="Campania" />
+                      <MegaMenuItem href="/explore?regions=Tuscany " text="Tuscany" />
+                      <MegaMenuItem href="/explore?regions=Trentino" text="Trentino" />
+                      <MegaMenuItem href="/explore?regions=Umbria" text="Umbria" />
                       <MegaMenuItem
                         href="/regions/valle-d-aosta"
                         text="Valle d'Aosta"
                       />
-                      <MegaMenuItem href="/regions/veneto" text="Veneto" />
+                      <MegaMenuItem href="/explore?regions=Veneto" text="Veneto" />
                     </div>
                   </div>
                 </div>
                 <div className="col-span-1 w-full rounded-md bg-slate-100 px-4 py-2 dark:bg-slate-900">
                   <div className="font-medium">
-                    <Link href="/countries/france">France</Link>
+                    <Link href="/explore?countries=France">France</Link>
                   </div>
-                  <MegaMenuItem href="/regions/alsace" text="Alsace" />
-                  <MegaMenuItem href="/regions/bordeaux" text="Bordeaux" />
-                  <MegaMenuItem href="/regions/burgundy" text="Burgundy" />
-                  <MegaMenuItem href="/regions/jura" text="Jura" />
+                  <MegaMenuItem href="/explore?regions=Alsace" text="Alsace" />
+                  <MegaMenuItem href="/explore?regions=Bordeaux" text="Bordeaux" />
+                  <MegaMenuItem href="/explore?regions=Burgundy" text="Burgundy" />
+                  <MegaMenuItem href="/explore?regions=Jura" text="Jura" />
 
-                  <MegaMenuItem href="/regions/provence" text="Provence" />
+                  <MegaMenuItem href="/explore?regions=Provence" text="Provence" />
                   <MegaMenuItem
                     href="/regions/champagne-region                    "
                     text="Champagne"
                   />
-                  <MegaMenuItem href="/regions/savoy" text="Savoy" />
+                  <MegaMenuItem href="/explore?regions=savoy" text="Savoy" />
                   <MegaMenuItem href="/regions/rhone-valley" text="Rhone" />
                   <MegaMenuItem
                     href="/regions/loire-valley                    "
                     text="Loire"
                   />
                   <div className="pt-2 text-sm">
-                    <Link href="/countries" prefetch={false}>
+                    <Link href="/explore" prefetch={false}>
                       <span className="flex items-center text-slate-600  decoration-slate-400 hover:underline dark:text-slate-400 dark:decoration-slate-600">
                         {"All regions"}
                         <ArrowSmallRightIcon className=" h-4 w-4" />
@@ -174,17 +182,17 @@ export function MegaMenu() {
 
                 <div className="col-span-1 w-full rounded-md bg-slate-100 px-4 py-2 text-slate-600 dark:bg-slate-900 dark:text-slate-400">
                   <div className="font-medium">Estero</div>
-                  <MegaMenuItem href="/countries/spain" text="Spain" />
-                  <MegaMenuItem href="/countries/germany" text="Germany" />
-                  <MegaMenuItem href="/countries/slovenia" text="Slovenia" />
+                  <MegaMenuItem href="/explore?countries=Spain" text="Spain" />
+                  <MegaMenuItem href="/explore?countries=Germany" text="Germany" />
+                  <MegaMenuItem href="/explore?countries=Slovenia" text="Slovenia" />
                   <MegaMenuItem href="/countries/united-states" text="USA" />
                   <MegaMenuItem
                     href="/countries/nuova-zelanda"
                     text="New Zeland"
                   />
-                  <MegaMenuItem href="/countries/cile" text="Chile" />
+                  <MegaMenuItem href="/explore?countries=Chile" text="Chile" />
                   <div className="py-2 text-sm">
-                    <Link href="/countries" prefetch={false}>
+                    <Link href="/explore" prefetch={false}>
                       <span className="flex items-center decoration-slate-400 hover:underline dark:decoration-slate-600">
                         {"All countries"}
                         <ArrowSmallRightIcon className="h-4 w-4" />
@@ -194,7 +202,7 @@ export function MegaMenu() {
                 </div>
 
                 <div className="col-span-3 flex w-full flex-col text-sm text-slate-600 dark:text-slate-400">
-                  <Link href="/regions" prefetch={false}>
+                  <Link href="/explore" prefetch={false}>
                     <span className="flex items-center decoration-slate-400 hover:underline dark:decoration-slate-600">
                       {"Browse all regions"}
                       <ArrowSmallRightIcon className="h-4 w-4" />

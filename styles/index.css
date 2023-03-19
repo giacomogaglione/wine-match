@@ -312,7 +312,7 @@ body {
 
 .aa-DetachedSearchButton {width: 125% !important;}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .aa-DetachedContainer {
     height: 90% !important;
     margin: 5% !important;
