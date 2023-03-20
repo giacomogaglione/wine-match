@@ -37,7 +37,7 @@ function App({
         initialSession={pageProps.initialSession}
       >
         <MyUserContextProvider>
-          <ThemeProvider attribute="class">
+          <ThemeProvider attribute="class" defaultTheme="dark">
             <Analytics />
             <Layout>
               <Component {...pageProps} />

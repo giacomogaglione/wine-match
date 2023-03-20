@@ -84,7 +84,7 @@ export function Filters() {
               label: "cursor-pointer text-xs",
               checkbox:
                 "mr-2 peer h-3 w-3 shrink-0 rounded-sm border border-indigo-300",
-              showMore:"font-extralight text-xs ml-1",
+              showMore: "font-extralight text-xs ml-1",
               count: "font-extralight text-xs ml-1",
             }}
           />
