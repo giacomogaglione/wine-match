@@ -48,7 +48,7 @@ export default function Producers({ producer, relatedWines }) {
               {producer.country}
             </Link>
           </div>
-        </div>{" "}
+        </div>
         <BlurImage
           imgSrc={producer.image}
           imgAlt={producer.name}

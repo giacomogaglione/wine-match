@@ -9,8 +9,8 @@ interface IAwardsProps {
 export default function Awards({ wine }: IAwardsProps) {
   const Award = ({ item }) => {
     return (
-      <div className="mr-2 mb-2 w-fit rounded-md bg-slate-300/50 px-1 py-[1px] text-xs dark:bg-slate-800">
-        <span className="mr-1 rounded-l-md bg-slate-100/70 px-1 font-medium text-indigo-500 dark:bg-slate-700/70">
+      <div className="mr-2 mb-2 w-fit rounded-md bg-slate-300/50 px-1 py-[1px] text-xs dark:bg-slate-900">
+        <span className="mr-1 rounded-l-md bg-slate-100/70 px-1 font-medium text-indigo-500 dark:bg-slate-800/70 dark:text-indigo-500">
           {item.label}
         </span>
         <span className="font-light text-slate-600 dark:text-slate-400">
