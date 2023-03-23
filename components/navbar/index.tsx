@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-gradient sticky top-0 z-50 w-full backdrop-blur-3xl transition-all duration-150">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-4">
         <Logo />
         <div className="hidden items-center justify-between md:hidden lg:flex">
           <MegaMenu />

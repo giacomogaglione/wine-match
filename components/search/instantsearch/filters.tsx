@@ -34,10 +34,10 @@ const items = [
     showMore: true,
   },
   {
-    label: "Wine styles",
-    attribute: "classification",
+    label: "Producers",
+    attribute: "producer",
     searchable: true,
-    searchablePlaceholder: "Search wine styles",
+    searchablePlaceholder: "Search producers",
     showMore: true,
   },
 ]
@@ -99,7 +99,7 @@ export function VirtualFilters() {
   useRefinementList({ attribute: "_tags" })
   useRefinementList({ attribute: "region" })
   useRefinementList({ attribute: "country" })
-  useRefinementList({ attribute: "classification" })
+  useRefinementList({ attribute: "producer" })
 
   return null
 }

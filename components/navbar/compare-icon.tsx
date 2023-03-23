@@ -12,6 +12,8 @@ import {
 import { useStore } from "@/store/compare-store"
 import { StarIcon, TrashIcon } from "@heroicons/react/24/outline"
 
+import BlurImage from "../blur-image"
+
 export function ComparisonIcon() {
   const compareList = useStore((state) => state.compareList)
   const compareLength = compareList.length
@@ -32,17 +34,22 @@ export function ComparisonIcon() {
           <StarIcon className="h-6 w-6" aria-hidden="true" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="mr-4 w-56">
+      <DropdownMenuContent className="mr-4 mt-2 w-72">
         {myCompareLength > 1 && (
           <>
             <DropdownMenuGroup>
               {compareList.map((wine) => (
                 <DropdownMenuItem key={wine.id}>
-                  <div className="text-md flex items-center rounded-lg p-1 text-slate-600 transition duration-150 ease-in-out hover:bg-slate-50 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-700">
+                  <BlurImage
+                    imgSrc={wine.image}
+                    imgAlt={wine.name}
+                    height="4rem"
+                  />
+                  <div className="text-md flex items-center rounded-lg text-slate-600 transition duration-150 ease-in-out hover:bg-slate-50 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-700">
                     {wine?.name}
                     <div>
                       <TrashIcon
-                        className="ml-1 h-4 w-4 cursor-pointer text-slate-500 hover:text-red-500"
+                        className="ml-2 h-4 w-4 cursor-pointer text-slate-500 hover:text-red-500"
                         aria-hidden="true"
                         onClick={() => removeItem(wine?.id)}
                       />
@@ -54,11 +61,12 @@ export function ComparisonIcon() {
 
             <DropdownMenuSeparator />
             {myCompareLength < 5 && (
-              <DropdownMenuItem asChild className="w-full rounded-lg">
-                <Link href="/compare">
-                  <Button variant="ghost" size="sm">
-                    Compare Now →
-                  </Button>
+              <DropdownMenuItem>
+                <Link
+                  href="/compare"
+                  className="my-1 w-full cursor-pointer rounded-md border-2 border-indigo-500 px-3 py-1 text-center text-sm font-semibold text-indigo-500 focus:outline-none"
+                >
+                  Compare Now
                 </Link>
               </DropdownMenuItem>
             )}

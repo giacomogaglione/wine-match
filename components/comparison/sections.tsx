@@ -138,7 +138,7 @@ export default function AwardsAndOrganolepticSection({ wine }: Props) {
                   {item.name}
                 </div>
                 <div className="font-semibold text-slate-800 dark:text-slate-300">
-                  {baseStat}
+                  {baseStat} / {baseScore}
                 </div>
               </div>
               <div className="mt-1 mb-2 h-2 w-full flex-1 overflow-hidden rounded-full bg-slate-300 dark:bg-slate-800">

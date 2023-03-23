@@ -77,70 +77,7 @@ export function MegaMenu() {
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Grapes</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <div className="w-[21rem] p-3 lg:w-[30rem]">
-              <div className="grid grid-cols-3 gap-4">
-                <div className="col-span-1 w-full rounded-md bg-slate-100 p-4 dark:bg-slate-900">
-                  <MegaMenuItem
-                    href="/explore?grapes=Sauvignon"
-                    text="Cabernet Sauvignon"
-                  />
-                  <MegaMenuItem href="/explore?grapes=Merlot" text="Merlot" />
-                  <MegaMenuItem
-                    href="/explore?grapes=Chardonnay"
-                    text="Chardonnay"
-                  />
-                  <MegaMenuItem
-                    href="/explore?grapes=Pinot Nero"
-                    text="Pinot Noir"
-                  />
-                </div>
 
-                <div className="col-span-1 w-full rounded-md bg-slate-100 p-4 dark:bg-slate-900">
-                  <MegaMenuItem
-                    href="/explore?grapes=Nebbiolo"
-                    text="Nebbiolo"
-                  />
-                  <MegaMenuItem
-                    href="/explore?grapes=Aglianico"
-                    text="Aglianico"
-                  />
-                  <MegaMenuItem
-                    href="/explore?grapes=Sangiovese"
-                    text="Sangiovese"
-                  />
-                  <MegaMenuItem href="/explore?grapes=Barbera" text="Barbera" />
-                </div>
-
-                <div className="col-span-1 w-full rounded-md bg-slate-100 p-4 dark:bg-slate-900">
-                  <MegaMenuItem
-                    href="/explore?grapes=Riesling"
-                    text="Riesling"
-                  />
-                  <MegaMenuItem
-                    href="/explore?grapes=Vermentino"
-                    text="Vermentino"
-                  />
-                  <MegaMenuItem
-                    href="/explore?grapes=Trebbiano"
-                    text="Trebbiano"
-                  />
-                  <MegaMenuItem href="/explore?grapes=Syrah" text="Syrah" />
-                </div>
-                <div className="col-span-3 flex w-full flex-col text-sm text-slate-600 dark:text-slate-400">
-                  <Link href="/explore" prefetch={false}>
-                    <span className="flex items-center decoration-slate-400 hover:underline dark:decoration-slate-600">
-                      Browse all grapes
-                      <ArrowSmallRightIcon className=" h-4 w-4" />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Regions</NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -279,8 +216,8 @@ export function MegaMenu() {
                   </div>
                 </div>
 
-                <div className="col-span-1 w-full rounded-md bg-slate-100 px-4 py-2 text-slate-600 dark:bg-slate-900 dark:text-slate-400">
-                  <div className="font-medium">Estero</div>
+                <div className="col-span-1 w-full rounded-md bg-slate-100 px-4 py-2 dark:bg-slate-900">
+                  <div className="font-medium">World</div>
                   <MegaMenuItem href="/explore?countries=Spain" text="Spain" />
                   <MegaMenuItem
                     href="/explore?countries=Germany"
@@ -311,6 +248,71 @@ export function MegaMenu() {
                     <span className="flex items-center decoration-slate-400 hover:underline dark:decoration-slate-600">
                       {"Browse all regions"}
                       <ArrowSmallRightIcon className="h-4 w-4" />
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Grapes</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <div className="w-[21rem] p-3 lg:w-[30rem]">
+              <div className="grid grid-cols-3 gap-4">
+                <div className="col-span-1 w-full rounded-md bg-slate-100 p-4 dark:bg-slate-900">
+                  <MegaMenuItem
+                    href="/explore?grapes=Sauvignon"
+                    text="Cabernet Sauvignon"
+                  />
+                  <MegaMenuItem href="/explore?grapes=Merlot" text="Merlot" />
+                  <MegaMenuItem
+                    href="/explore?grapes=Chardonnay"
+                    text="Chardonnay"
+                  />
+                  <MegaMenuItem
+                    href="/explore?grapes=Pinot Nero"
+                    text="Pinot Noir"
+                  />
+                </div>
+
+                <div className="col-span-1 w-full rounded-md bg-slate-100 p-4 dark:bg-slate-900">
+                  <MegaMenuItem
+                    href="/explore?grapes=Nebbiolo"
+                    text="Nebbiolo"
+                  />
+                  <MegaMenuItem
+                    href="/explore?grapes=Aglianico"
+                    text="Aglianico"
+                  />
+                  <MegaMenuItem
+                    href="/explore?grapes=Sangiovese"
+                    text="Sangiovese"
+                  />
+                  <MegaMenuItem href="/explore?grapes=Barbera" text="Barbera" />
+                </div>
+
+                <div className="col-span-1 w-full rounded-md bg-slate-100 p-4 dark:bg-slate-900">
+                  <MegaMenuItem
+                    href="/explore?grapes=Riesling"
+                    text="Riesling"
+                  />
+                  <MegaMenuItem
+                    href="/explore?grapes=Vermentino"
+                    text="Vermentino"
+                  />
+                  <MegaMenuItem
+                    href="/explore?grapes=Trebbiano"
+                    text="Trebbiano"
+                  />
+                  <MegaMenuItem href="/explore?grapes=Syrah" text="Syrah" />
+                </div>
+                <div className="col-span-3 flex w-full flex-col text-sm text-slate-600 dark:text-slate-400">
+                  <Link href="/explore" prefetch={false}>
+                    <span className="flex items-center decoration-slate-400 hover:underline dark:decoration-slate-600">
+                      Browse all grapes
+                      <ArrowSmallRightIcon className=" h-4 w-4" />
                     </span>
                   </Link>
                 </div>

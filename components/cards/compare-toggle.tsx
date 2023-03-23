@@ -36,7 +36,7 @@ export default function CompareToggle({ wine }: ICompareToggleProps) {
           onPressedChange={compareListClikHandler}
           asChild
         >
-          <button className="absolute bottom-3 right-6 flex cursor-pointer items-center rounded-md border border-transparent bg-slate-200/90 py-1 px-2 hover:shadow-lg dark:bg-slate-800">
+          <button className="absolute bottom-3 right-6 flex cursor-pointer items-center rounded-md border border-transparent bg-slate-200 py-1 px-2 hover:shadow-lg dark:bg-slate-700/50">
             {inCompareList() ? (
               <StarIconSolid className="h-4 w-4 font-medium text-indigo-500" />
             ) : (

@@ -19,8 +19,8 @@ import {
 const items = [
   { label: "Red Wines", href: "/explore?types=Red" },
   { label: "White Wines", href: "/explore?types=White" },
-  { label: "Regions", href: "/regions" },
-  { label: "Grapes", href: "/grapes" },
+  { label: "Regions", href: "/explore" },
+  { label: "Grapes", href: "/explore" },
   { label: "Compare", href: "/compare" },
 ]
 

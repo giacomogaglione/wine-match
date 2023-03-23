@@ -9,7 +9,7 @@ type RouteState = {
   grapes?: string[]
   regions?: string[]
   countries?: string[]
-  classifications?: string[]
+  producers?: string[]
   page?: string
 }
 
@@ -19,7 +19,7 @@ const routeStateDefaultValues: RouteState = {
   grapes: undefined,
   regions: undefined,
   countries: undefined,
-  classifications: undefined,
+  producers: undefined,
   page: "1",
 }
 
@@ -65,11 +65,10 @@ const router = historyRouter<RouteState>({
       queryParameters.countries = routeState.countries.map(encodeURIComponent)
     }
     if (
-      routeState.classifications &&
-      routeState.classifications !== routeStateDefaultValues.classifications
+      routeState.producers &&
+      routeState.producers !== routeStateDefaultValues.producers
     ) {
-      queryParameters.classifications =
-        routeState.classifications.map(encodeURIComponent)
+      queryParameters.producers = routeState.producers.map(encodeURIComponent)
     }
 
     if (routeState.page && routeState.page !== routeStateDefaultValues.page) {
@@ -91,7 +90,7 @@ const router = historyRouter<RouteState>({
       grapes = [],
       regions = [],
       countries = [],
-      classifications = [],
+      producers = [],
       page = 1,
     } = queryParameters
 
@@ -108,10 +107,8 @@ const router = historyRouter<RouteState>({
     const allCountries = (
       Array.isArray(countries) ? countries : [countries].filter(Boolean)
     ) as string[]
-    const allClassifications = (
-      Array.isArray(classifications)
-        ? classifications
-        : [classifications].filter(Boolean)
+    const allProducers = (
+      Array.isArray(producers) ? producers : [producers].filter(Boolean)
     ) as string[]
     return {
       query: decodeURIComponent(query as string),
@@ -119,7 +116,7 @@ const router = historyRouter<RouteState>({
       grapes: allGrapes.map(decodeURIComponent),
       regions: allRegions.map(decodeURIComponent),
       countries: allCountries.map(decodeURIComponent),
-      classifications: allClassifications.map(decodeURIComponent),
+      producers: allProducers.map(decodeURIComponent),
       page: page as string,
     }
   },
@@ -134,12 +131,10 @@ const getStateMapping = ({ indexName }) => ({
       grapes: indexUiState.refinementList && indexUiState.refinementList._tags,
       regions:
         indexUiState.refinementList && indexUiState.refinementList.region,
-      classifications:
-        indexUiState.refinementList &&
-        indexUiState.refinementList.classification,
+      producers:
+        indexUiState.refinementList && indexUiState.refinementList.producer,
       countries:
         indexUiState.refinementList && indexUiState.refinementList.country,
-
       page: (indexUiState.page && String(indexUiState.page)) || undefined,
     }
   },
@@ -158,8 +153,8 @@ const getStateMapping = ({ indexName }) => ({
     if (routeState.countries) {
       refinementList.country = routeState.countries
     }
-    if (routeState.classifications) {
-      refinementList.classification = routeState.classifications
+    if (routeState.producers) {
+      refinementList.producer = routeState.producers
     }
 
     return {

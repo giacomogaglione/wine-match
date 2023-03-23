@@ -16,7 +16,7 @@ export function Search() {
       <Autocomplete
         openOnFocus={false}
         detachedMediaQuery=""
-        placeholder="Search for product, producer, region... "
+        placeholder="Search for wine, producer, region... "
         getSources={({ query }: { query: string }) => [
           {
             sourceId: "id",

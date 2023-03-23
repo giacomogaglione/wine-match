@@ -243,9 +243,10 @@ body {
      !important;
   line-height: 1.25rem
      !important;
-  color: rgb(100 116 139) !important;
+  color: rgb(148 163 184) !important;
   border: none !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
+  padding-left: 4px !important;
 }
 
 .dark .aa-DetachedSearchButton {
@@ -262,7 +263,7 @@ body {
 
 .dark .aa-DetachedFormContainer {
   background-color: rgb(30 41 59) !important;
-  color: rgb(100 116 139) !important;
+  color: rgb(148 163 184) !important;
 }
 
 .aa-DetachedContainer .aa-Panel {
@@ -279,7 +280,7 @@ body {
 
 .dark .aa-Source {
   background-color: rgb(30 41 59) !important;
-  color: rgb(100 116 139) !important;
+  color: rgb(148 163 184) !important;
 }
 
 .aa-Form {
@@ -289,11 +290,11 @@ body {
 
 .dark .aa-Form {
   background-color: rgb(30 41 59) !important;
-  color: rgb(100 116 139) !important;
+  color: rgb(148 163 184) !important;
 }
 
 .dark .aa-Input {
-  color: rgb(100 116 139) !important;
+  color: rgb(148 163 184) !important;
   border-color: rgb(100 116 139) !important;
   font-size: 16px !important;
 }
@@ -310,7 +311,7 @@ body {
   background-color: rgb(30 41 59) !important;
 }
 
-.aa-DetachedSearchButton {width: 125% !important;}
+.aa-DetachedSearchButton {width: 450px !important;}
 
 @media screen and (max-width: 768px) {
   .aa-DetachedContainer {
