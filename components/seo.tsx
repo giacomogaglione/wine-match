@@ -8,7 +8,7 @@ export default function Seo(props: any) {
     title: "Wine Match",
     description: `The most extensive source of wines, spumanti and champagnes.`,
     image:
-      "https://wine-match.vercel.app/og.jpg",
+      "https://res.cloudinary.com/winecompare/image/upload/v1682636470/og.jpg",
     type: "website",
     ...customMeta,
   }
