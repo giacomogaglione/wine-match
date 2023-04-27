@@ -6,9 +6,9 @@ export default function Seo(props: any) {
   const router = useRouter()
   const meta = {
     title: "Wine Match",
-    description: `Wine Match | The most extensive source of wines, spumanti and champagnes.`,
+    description: `The most extensive source of wines, spumanti and champagnes.`,
     image:
-      "https://res.cloudinary.com/winecompare/image/upload/v1669683375/wine_match_logo.svg",
+      "https://wine-match.vercel.app/og.jpg",
     type: "website",
     ...customMeta,
   }

@@ -37,6 +37,7 @@
     "next-themes": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-instantsearch-hooks-router-nextjs": "^6.42.0",
     "react-instantsearch-hooks-web": "^6.30.1",
     "tailwind-merge": "^1.9.1",
     "tailwindcss-radix": "^2.6.1",

@@ -44,7 +44,7 @@ export function MobileMenu() {
           <Bars3Icon className="h-6 w-6" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="mr-4 w-44 p-2">
+      <DropdownMenuContent className="mr-4 mt-2 w-44 p-2">
         {user ? (
           <DropdownMenuGroup>
             {itemsaccount.map((itemaccount) => (

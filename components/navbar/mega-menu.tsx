@@ -26,7 +26,7 @@ export function MegaMenu() {
                     </Link>
                   </div>
                   <MegaMenuItem
-                    href="/explore?types=Red&regions=Tuscany"
+                    href="/explore?prod_wines%5BrefinementList%5D%5Btype%5D%5B0%5D=Dessert"
                     text="Tuscany"
                   />
                   <MegaMenuItem

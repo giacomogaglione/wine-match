@@ -53,7 +53,7 @@ export function AccountMenu() {
           <UserCircleIcon className="h-6 w-6" aria-hidden="true" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="mr-4 w-44 p-2">
+      <DropdownMenuContent className="mr-4 mt-2 w-44 p-2">
         <DropdownMenuGroup>
           {items.map((item) => (
             <DropdownMenuItem key={item.href}>
